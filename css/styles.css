@@ -8,7 +8,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+  background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 }
@@ -211,11 +211,7 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-<<<<<<< HEAD
   height: calc(100vh - 80px);
-=======
-  height: 88%;
->>>>>>> 323e7f87a6f5f7f5c56b96f563df8155996c5548
   position: fixed;
   right: 0;
   top: 80px;
@@ -229,11 +225,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   /*position: absolute;*/
-<<<<<<< HEAD
-  width: 50vw;
-=======
   width: 50%;
->>>>>>> 323e7f87a6f5f7f5c56b96f563df8155996c5548
 }
 #restaurant-name {
   color: #f18200;

@@ -32,6 +32,7 @@ initMap = () => {
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.newMap);
     }
+      defocusVisualElements();
   });
 }
 
@@ -88,6 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
+  image.alt = DBHelper.imageAltForRestaurant(restaurant);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
@@ -191,4 +193,11 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+defocusVisualElements = () => {
+  const mapElements = document.querySelector('#map-container').querySelectorAll("*");
+  mapElements.forEach(mapElement => {
+    mapElement.tabIndex=-1;
+  });
 }

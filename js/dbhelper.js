@@ -1,3 +1,12 @@
+// registering service worker
+if(navigator.serviceWorker) {
+  navigator.serviceWorker.register('/sw.js').then(function() {
+    console.log("Registered Service Worker!");
+  }).catch(function() {
+    console.log('Unable to Register Service Worker')
+  });
+}
+
 /**
  * Common database helper functions.
  */
@@ -151,6 +160,10 @@ class DBHelper {
    */
   static imageUrlForRestaurant(restaurant) {
     return (`/img/${restaurant.photograph}`);
+  }
+  // restaurant image Alt property
+  static imageAltForRestaurant(restaurant) {
+    return (restaurant.alt);
   }
 
   /**
