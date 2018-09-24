@@ -312,6 +312,7 @@ nav h1 a {
   #restaurant-container, #reviews-container{
     width: 80%;
     padding: 10%;
+    margin-top: 100px;
   }
   .inside #footer, #breadcrumb, #restaurant-img, #restaurant-cuisine{
     width: 100%;
